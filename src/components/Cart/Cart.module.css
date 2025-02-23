@@ -1,0 +1,128 @@
+.cart__card {
+  border-top: solid 1px rgb(215, 212, 212);
+  border-bottom: solid 1px rgb(215, 212, 212);
+}
+.cartPage__cartDetails {
+  max-height: 250px;
+}
+.cartPage__cartDetailsButton {
+  border-radius: 15px;
+  width: 100%;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: #2162a1;
+}
+
+.quantityButton {
+  border: 2px solid gold;
+  border-radius: 15px;
+  display: inline;
+}
+
+.cart__btnCount.cart__btnCount {
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+  padding: 0 15px;
+  font-size: large;
+  font-weight: bold;
+  color: black;
+  margin: auto 8px;
+}
+@media (max-width: 767px) {
+  body {
+    background-color: white;
+  }
+
+  .cartPage__cartDetails {
+    width: 100%;
+  }
+  .cartPage__cartDetailsBorder {
+    padding: 10px;
+    border: 1px solid #246fb6;
+    border-left-width: 10px;
+    border-radius: 10px;
+  }
+  .cartPage__cart {
+    width: 100%;
+  }
+
+  .cart__linkes {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 0 10px;
+  }
+  .cart__card {
+    background-color: #f7f9fa;
+    border: none;
+    margin: 10px 0;
+    border-radius: 8px;
+    padding: 8px;
+  }
+
+  .cart__description {
+    font-weight: normal !important;
+  }
+  .cart__container,
+  .cartPage__cart {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .cartPage__cartDetailsButton {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 25px;
+  }
+}
+
+/* 
+.languageSelector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  display: inline-block;
+}
+
+.languageSelector i {
+  font-size: 18px;
+  color: #333;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  color: white;
+}
+select {
+  padding: 8px 12px;
+  padding-left: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  appearance: none; 
+  background-color: white;
+  background-color: #2162a1;
+  color: white;
+}
+.languageSelector::after,
+.languageSelector::before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+  border-style: solid;
+  display: inline-block;
+}
+.languageSelector::after {
+  top: 65%;
+  border-width: 4px 3px 0 3px;
+  border-color: white transparent transparent transparent;
+  transform: translateY(-50%);
+}
+.languageSelector::before {
+  top: 45%;
+  border-width: 0 3px 4px 3px;
+  border-color: transparent transparent white transparent;
+  transform: translateY(-50%);
+} */
