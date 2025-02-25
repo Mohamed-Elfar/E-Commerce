@@ -77,52 +77,59 @@ a {
   }
 }
 
-/* 
-.languageSelector {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+/* .loader{
   display: inline-block;
+  animation: visability 2s infinite ease-in-out;
+  transform: rotate(180deg);
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+}
+@keyframes visability {
+  0%{
+    opacity: 0;
+    transform: rotate(-180deg);
+
+  }
+  50%{
+    transform: rotate(-380deg);
+
+  }
+
+  100%{
+    opacity: 1;
+    transform: rotate(0deg);  
+    transform: scale(1.2);
+
+  }
+} */
+.loader {
+  display: inline-block;
+  font-size: 48px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #FF9900, #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: spinAndScale 2s infinite ease-in-out;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.languageSelector i {
-  font-size: 18px;
-  color: #333;
-  position: absolute;
-  top: 15px;
-  left: 10px;
-  color: white;
+@keyframes spinAndScale {
+  0% {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(180deg) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(360deg) scale(1.2);
+  }
 }
-select {
-  padding: 8px 12px;
-  padding-left: 30px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  appearance: none; 
-  background-color: white;
-  background-color: #2162a1;
-  color: white;
-}
-.languageSelector::after,
-.languageSelector::before {
-  content: "";
-  position: absolute;
-  right: 10px;
-  pointer-events: none;
-  border-style: solid;
-  display: inline-block;
-}
-.languageSelector::after {
-  top: 65%;
-  border-width: 4px 3px 0 3px;
-  border-color: white transparent transparent transparent;
-  transform: translateY(-50%);
-}
-.languageSelector::before {
-  top: 45%;
-  border-width: 0 3px 4px 3px;
-  border-color: transparent transparent white transparent;
-  transform: translateY(-50%);
-} */

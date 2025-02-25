@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function useFetch(type, url, body = null, config = {}) {
@@ -13,9 +13,9 @@ export default function useFetch(type, url, body = null, config = {}) {
       try {
         let res;
         if (type === "get" || type === "delete") {
-          res = await axios[type](url, config); 
+          res = await axios[type](url, config);
         } else if (type === "post" || type === "put" || type === "patch") {
-          res = await axios[type](url, body, config); 
+          res = await axios[type](url, body, config);
         } else {
           throw new Error("Invalid request type");
         }
@@ -33,7 +33,7 @@ export default function useFetch(type, url, body = null, config = {}) {
     };
 
     fetchData();
-  }, [type, url, body]); 
+  }, [type, url, body]);
 
   return { data, loading, error };
 }
