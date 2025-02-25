@@ -4,6 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import Home from "./components/Home/Home";
 import Cart from "./components/Cart/Cart";
+import SingleProduct from "./components/SingleProduct/SingleProduct";
+import RegistrationForm from "./components/RegistrationForm/RegistrationForm";
+
 
 const routers = createBrowserRouter([
   {
@@ -16,6 +19,8 @@ const routers = createBrowserRouter([
       },
       { path: "home", element: <Home /> },
       { path: "cart", element: <Cart /> },
+      { path: "register", element: <RegistrationForm /> },
+
     ],
   },
 ]);
