@@ -14,6 +14,73 @@ import AllProducts from "./components/AllProducts/AllProducts";
 import NotFound from "./components/NotFound/NotFound";
 import CheckOut from './components/Checkout/Checkout';
 
+// const routers = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <Layout />,
+//     children: [
+//       {
+//         index: true,
+//         element: <RegistrationForm />,
+//       },
+//       {
+//         path: "home",
+//         element: (
+//           <Suspense>
+//             <ProtectedRoutes>
+//               <Home />
+//             </ProtectedRoutes>
+//           </Suspense>
+//         ),
+//       },
+//       {
+//         path: "login",
+//         element: (
+//           <Suspense>
+//             <AuthView>
+//               <Login />{" "}
+//             </AuthView>
+//           </Suspense>
+//         ),
+//       },
+//       {
+//         path: "cart",
+//         element: (
+//           <ProtectedRoutes>
+//             <Cart />
+//           </ProtectedRoutes>
+//         ),
+//       },
+//       { path: "register", element: <RegistrationForm /> },
+//       {
+//         path: "product/:id",
+//         element: (
+//           <ProtectedRoutes>
+//             <SingleProduct />
+//           </ProtectedRoutes>
+//         ),
+//       },
+//       {
+//         path: "wishlist",
+//         element: (
+//           <ProtectedRoutes>
+//             <Wishlist />
+//           </ProtectedRoutes>
+//         ),
+//       },
+//       {
+//         path: "allProducts",
+//         element: (
+//           <ProtectedRoutes>
+//             <AllProducts />
+//           </ProtectedRoutes>
+//         ),
+//       },
+//       { path: "checkout", element: <CheckOut /> },
+//       { path: "*", element: <NotFound /> },
+//     ],
+//   },
+// ]);
 const routers = createBrowserRouter([
   {
     path: "/",
@@ -21,10 +88,16 @@ const routers = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <RegistrationForm />,
+        element: (
+          <Suspense>
+            <ProtectedRoutes>
+              <Home />
+            </ProtectedRoutes>
+          </Suspense>
+        ),
       },
       {
-        path: "home",
+        path: "home", 
         element: (
           <Suspense>
             <ProtectedRoutes>
@@ -38,7 +111,7 @@ const routers = createBrowserRouter([
         element: (
           <Suspense>
             <AuthView>
-              <Login />{" "}
+              <Login />
             </AuthView>
           </Suspense>
         ),
@@ -77,10 +150,11 @@ const routers = createBrowserRouter([
         ),
       },
       { path: "checkout", element: <CheckOut /> },
-      { path: "*", element: <NotFound /> },
+      { path: "*", element: <NotFound /> }, 
     ],
   },
 ]);
+
 function App() {
   return (
     <>
