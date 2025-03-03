@@ -1,5 +1,5 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, createHashRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import Home from "./components/Home/Home";
 import Cart from "./components/Cart/Cart";
@@ -81,7 +81,7 @@ import CheckOut from './components/Checkout/Checkout';
 //     ],
 //   },
 // ]);
-const routers = createBrowserRouter([
+const routers = createHashRouter([
   {
     path: "/",
     element: <Layout />,
