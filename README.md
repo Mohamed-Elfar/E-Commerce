@@ -39,4 +39,4 @@ A fully responsive **Ecommerce App** built using **React** and **Bootstrap** for
 4.Open your browser and navigate to `http://localhost:3000`.
 
 ## Live Demo
-[View Live Demo](https://mohamed-elfar.github.io/Movies-App-Refactored/)
+[View Live Demo](https://mohamed-elfar.github.io/E-Commerce/)
