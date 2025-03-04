@@ -120,7 +120,9 @@ const cartSlice = createSlice({
       })
       .addCase(getCart.fulfilled, (state, action) => {
         state.status = "succeeded";
+
         localStorage.setItem("cartId", action.payload?.data?._id || "");
+
         state.cartItems = action.payload?.data?.products || [];
         state.numOfCartItems = state.cartItems.reduce(
           (sum, item) => sum + item.count,

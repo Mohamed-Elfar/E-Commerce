@@ -7,6 +7,7 @@ import Button from "./../Button/Button";
 
 export default function CheckOut() {
   const dispatch = useDispatch();
+  // const cartId = useSelector((state) => state.cart.cartId); // Get cartId from Redux
   const status = useSelector((state) => state.cart.status);
   const [cartId, setCartId] = useState(localStorage.getItem("cartId") || null);
   const formik = useFormik({
@@ -27,7 +28,7 @@ export default function CheckOut() {
         return;
       }
 
-      const response = dispatch(
+      const response = await dispatch(
         onlinePayment({ cartId: cartId, shippingAddress })
       );
 
